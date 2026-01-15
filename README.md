@@ -1,184 +1,283 @@
-# UI UX Pro Max
+# Software Development Skills - Complete SDLC
 
-An AI skill that provides design intelligence for building professional UI/UX across multiple platforms and frameworks.
+Full bộ skills cho phát triển phần mềm chuyên nghiệp, bao gồm 4 vai trò: **BA**, **BE**, **QAQC**, **DevOps**.
 
-<p align="center">
-  <img src="screenshots/website.png" alt="UI UX Pro Max" width="800">
-</p>
+## 🎯 Overview
 
-## Overview
+Bộ skills này cung cấp workflows, templates, và best practices cho toàn bộ Software Development Lifecycle (SDLC) - từ phân tích yêu cầu đến deployment production.
 
-UI UX Pro Max is a searchable database of UI styles, color palettes, font pairings, chart types, product recommendations, UX guidelines, and stack-specific best practices. It works as a skill/workflow for AI coding assistants (Claude Code, Codex, Cursor, Windsurf, etc.).
+**4 Role-Based Skills:**
+- 👔 **BA (Business Analyst)** - Requirements gathering, user stories, acceptance criteria
+- ⚙️ **BE (Backend Engineer)** - API design, database, authentication, security
+- 🧪 **QAQC (Quality Assurance)** - Test planning, test cases, bug reports, quality metrics
+- 🚀 **DevOps** - CI/CD, deployment, monitoring, infrastructure
 
-## Features
+---
 
-- **57 UI Styles** - Glassmorphism, Claymorphism, Minimalism, Brutalism, Neumorphism, Bento Grid, Dark Mode, and more
-- **95 Color Palettes** - Industry-specific palettes for SaaS, E-commerce, Healthcare, Fintech, Beauty, etc.
-- **56 Font Pairings** - Curated typography combinations with Google Fonts imports
-- **24 Chart Types** - Recommendations for dashboards and analytics
-- **11 Tech Stacks** - React, Next.js, Vue, Nuxt.js, Nuxt UI, Svelte, SwiftUI, React Native, Flutter, HTML+Tailwind, shadcn/ui
-- **98 UX Guidelines** - Best practices, anti-patterns, and accessibility rules
+## 📦 Features
 
-## Installation
+### BA Skill
+- ✅ Requirements gathering framework với 20 interview questions
+- ✅ User story templates (As a... I want... So that...)
+- ✅ Acceptance criteria guidelines (Gherkin/BDD format)
+- ✅ Prioritization frameworks (MoSCoW, RICE)
+- ✅ Stakeholder communication templates
+- ✅ Requirements document templates
 
-### Using CLI (Recommended)
+### BE Skill
+- ✅ RESTful API design best practices
+- ✅ Authentication patterns (JWT, OAuth, Session)
+- ✅ Database optimization (indexing, query optimization, N+1 prevention)
+- ✅ Caching strategies (Redis implementation)
+- ✅ Error handling patterns
+- ✅ Security best practices (OWASP Top 10)
+- ✅ Performance optimization techniques
 
-```bash
-# Install CLI globally
-npm install -g uipro-cli
+### QAQC Skill
+- ✅ Test planning framework
+- ✅ Test case templates (functional, negative, boundary, edge cases)
+- ✅ Bug report templates với severity levels
+- ✅ Test execution reports
+- ✅ Quality metrics (coverage, defect density, pass rate)
+- ✅ Testing tools recommendations (Jest, Playwright, Cypress, k6)
 
-# Go to your project
-cd /path/to/your/project
+### DevOps Skill
+- ✅ CI/CD pipeline templates (GitHub Actions, GitLab CI, Jenkins)
+- ✅ Deployment strategies (Blue-Green, Canary, Rolling)
+- ✅ Infrastructure as Code (Terraform examples)
+- ✅ Monitoring setup (Prometheus + Grafana)
+- ✅ Logging implementation (Winston, ELK Stack)
+- ✅ Secrets management (AWS Secrets Manager, Vault)
+- ✅ Container orchestration (Docker, Kubernetes)
 
-# Install for your AI assistant
-uipro init --ai claude      # Claude Code
-uipro init --ai cursor      # Cursor
-uipro init --ai windsurf    # Windsurf
-uipro init --ai antigravity # Antigravity (.agent + .shared)
-uipro init --ai copilot     # GitHub Copilot
-uipro init --ai kiro        # Kiro
-uipro init --ai codex       # Codex (Skills)
-uipro init --ai gemini      # Gemini CLI
-uipro init --ai trae        # Trae
-uipro init --ai all         # All assistants
-```
+---
 
-### Other CLI Commands
+## 🚀 Installation
 
-```bash
-uipro versions              # List available versions
-uipro update                # Update to latest version
-uipro init --version v1.0.0 # Install specific version
-```
+### Antigravity (Gemini)
 
-### Manual Installation
-
-Copy the appropriate folders to your project:
-
-| AI Assistant   | Folders to Copy                                                      |
-| -------------- | -------------------------------------------------------------------- |
-| Claude Code    | `.claude/skills/ui-ux-pro-max/`                                      |
-| Cursor         | `.cursor/commands/ui-ux-pro-max.md` + `.shared/ui-ux-pro-max/`       |
-| Windsurf       | `.windsurf/workflows/ui-ux-pro-max.md` + `.shared/ui-ux-pro-max/`    |
-| Antigravity    | `.agent/workflows/ui-ux-pro-max.md` + `.shared/ui-ux-pro-max/`       |
-| GitHub Copilot | `.github/prompts/ui-ux-pro-max.prompt.md` + `.shared/ui-ux-pro-max/` |
-| Kiro           | `.kiro/steering/ui-ux-pro-max.md` + `.shared/ui-ux-pro-max/`         |
-| Codex          | `.codex/skills/ui-ux-pro-max/`                                       |
-| Gemini CLI     | `.gemini/skills/ui-ux-pro-max/` + `.shared/ui-ux-pro-max/`           |
-| Trae           | `.trae/skills/ui-ux-pro-max/` + `.shared/ui-ux-pro-max/`             |
-
-## Prerequisites
-
-Python 3.x is required for the search script.
+Copy các folders sau vào project của bạn:
 
 ```bash
-# Check if Python is installed
-python3 --version
+# Clone repo
+git clone https://github.com/TrungNguyenBao/skill-code.git
 
-# macOS
-brew install python3
+# Copy workflows
+cp -r skill-code/.agent/workflows/*.md your-project/.agent/workflows/
 
-# Ubuntu/Debian
-sudo apt update && sudo apt install python3
-
-# Windows
-winget install Python.Python.3.12
+# Copy skill definitions
+cp -r skill-code/.gemini/skills/* your-project/.gemini/skills/
 ```
 
-## Usage
-
-### Claude Code
-
-The skill activates automatically when you request UI/UX work. Just chat naturally:
-
+**File structure sau khi copy:**
 ```
-Build a landing page for my SaaS product
-```
-
-### Cursor / Windsurf / Antigravity
-
-Use the slash command to invoke the skill:
-
-```
-/ui-ux-pro-max Build a landing page for my SaaS product
-```
-
-### Kiro
-
-Type `/` in chat to see available commands, then select `ui-ux-pro-max`:
-
-```
-/ui-ux-pro-max Build a landing page for my SaaS product
+your-project/
+├── .agent/
+│   └── workflows/
+│       ├── ba.md
+│       ├── be.md
+│       ├── qaqc.md
+│       └── devops.md
+└── .gemini/
+    └── skills/
+        ├── ba/SKILL.md
+        ├── be/SKILL.md
+        ├── qaqc/SKILL.md
+        └── devops/SKILL.md
 ```
 
-### GitHub Copilot
+---
 
-In VS Code with Copilot, type `/` in chat to see available prompts, then select `ui-ux-pro-max`:
+## 💡 Usage
 
-```
-/ui-ux-pro-max Build a landing page for my SaaS product
-```
+### Antigravity / Gemini
 
-### Codex CLI
+Sử dụng slash commands để activate skills:
 
-The skill activates automatically for UI/UX requests. You can also invoke it explicitly:
+```bash
+# BA - Requirements gathering
+/ba analyze requirements for user authentication feature
 
-```
-$ui-ux-pro-max Build a landing page for my SaaS product
-```
+# BE - API implementation
+/be design REST API for product catalog with authentication
 
-### Gemini CLI
+# QAQC - Testing
+/qaqc create test plan for checkout flow
 
-The skill activates automatically when you request UI/UX work.
-
-```
-Build a landing page for my SaaS product
+# DevOps - Deployment
+/devops setup CI/CD pipeline with GitHub Actions
 ```
 
-### Trae
+### Example Workflow
 
-_Disclaimer: Trae skill is in beta. Please report any issues or feedback._
+**Complete feature development:**
 
-To use Trae skill, you need to switch to **SOLO** mode. If your request is related to skills, skills will be used:
+```bash
+# Step 1: BA - Gather requirements
+/ba create user stories for payment integration
 
-```
-Build a landing page (frontend ONLY) for my SaaS product.
-```
+# Step 2: BE - Implement backend
+/be implement Stripe payment API with webhook handling
 
-### Example Prompts
+# Step 3: QAQC - Test feature
+/qaqc create test cases for payment flow including edge cases
 
-```
-Build a landing page for my SaaS product
-
-Create a dashboard for healthcare analytics
-
-Design a portfolio website with dark mode
-
-Make a mobile app UI for e-commerce
+# Step 4: DevOps - Deploy
+/devops setup blue-green deployment for payment service
 ```
 
-### How It Works
+---
 
-1. **You ask** - Request any UI/UX task (build, design, create, implement, review, fix, improve)
-2. **Skill activates** - The AI automatically searches the design database for relevant styles, colors, typography, and guidelines
-3. **Smart recommendations** - Based on your product type and requirements, it finds the best matching design system
-4. **Code generation** - Implements the UI with proper colors, fonts, spacing, and best practices
+## 📚 Documentation
 
-### Supported Stacks
+### BA Workflows
+- **Requirements Gathering**: Stakeholder interviews, elicitation techniques
+- **User Stories**: Template format, prioritization (MoSCoW, RICE)
+- **Acceptance Criteria**: Gherkin/BDD format, scenario examples
+- **Documentation**: Requirements doc, status reports
 
-The skill provides stack-specific guidelines for:
+### BE Workflows
+- **API Design**: RESTful conventions, HTTP methods, status codes
+- **Authentication**: JWT implementation, RBAC, session management
+- **Database**: Indexing strategies, query optimization, migrations
+- **Security**: OWASP protection, input validation, rate limiting
+- **Performance**: Caching (Redis), connection pooling, compression
 
-- **HTML + Tailwind** (default)
-- **React** / **Next.js** / **shadcn/ui**
-- **Vue** / **Nuxt.js** / **Nuxt UI** / **Svelte**
-- **SwiftUI** / **React Native** / **Flutter**
+### QAQC Workflows
+- **Test Planning**: Test strategy, test pyramid, entry/exit criteria
+- **Test Cases**: Positive/negative/boundary/edge case templates
+- **Bug Reports**: Severity matrix, reproduction steps, logs
+- **Quality Metrics**: Coverage, defect density, pass rate formulas
+- **Tools**: Jest, Playwright, Cypress, k6, Postman
 
-Just mention your preferred stack in the prompt, or let it default to HTML + Tailwind.
+### DevOps Workflows
+- **CI/CD**: GitHub Actions, GitLab CI pipeline templates
+- **Deployment**: Blue-Green, Canary, Rolling update strategies
+- **Infrastructure**: Terraform IaC examples, AWS/GCP/Azure
+- **Monitoring**: Prometheus, Grafana dashboards, health checks
+- **Logging**: Winston, ELK Stack, centralized logging
+- **Secrets**: Environment variables, AWS Secrets Manager
 
-## Star History
+---
 
-[![Star History Chart](https://api.star-history.com/svg?repos=nextlevelbuilder/ui-ux-pro-max-skill&type=Date)](https://star-history.com/#nextlevelbuilder/ui-ux-pro-max-skill&Date)
+## 🔄 Complete SDLC Flow
 
-## License
+```
+┌──────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐
+│    BA    │ ──▶ │    BE    │ ──▶ │   QAQC   │ ──▶ │  DevOps  │
+│ Requirements │  │ Implementation │ │  Testing   │  │ Deployment │
+└──────────┘     └──────────┘     └──────────┘     └──────────┘
+     │                                                    │
+     └───────────────── Monitoring & Feedback ───────────┘
+```
 
-This project is licensed under the [MIT License](LICENSE).
+1. **BA**: Gather requirements → Create user stories → Define acceptance criteria
+2. **BE**: Design API → Implement features → Optimize database → Secure endpoints
+3. **QAQC**: Plan tests → Execute test cases → Report bugs → Verify quality
+4. **DevOps**: Setup CI/CD → Deploy → Monitor → Scale
+
+---
+
+## 🛠️ Tech Stack Coverage
+
+### Frontend
+React, Next.js, Vue, Nuxt, Svelte, Angular
+
+### Backend
+Node.js (Express, Fastify, NestJS), Python (FastAPI, Django), Java (Spring Boot), Go
+
+### Databases
+PostgreSQL, MySQL, MongoDB, Redis, DynamoDB
+
+### Testing
+Jest, Mocha, Pytest, Playwright, Cypress, Selenium, k6, JMeter
+
+### DevOps
+Docker, Kubernetes, GitHub Actions, GitLab CI, Terraform, AWS, GCP, Azure
+
+### Monitoring
+Prometheus, Grafana, ELK Stack, Datadog, Sentry
+
+---
+
+## 📝 Templates Included
+
+### BA Templates
+- Stakeholder interview questions (20 questions)
+- User story format
+- Requirements document
+- Weekly status report
+
+### BE Templates
+- API endpoint naming conventions
+- JWT authentication implementation
+- Error handling classes
+- Database migration scripts
+
+### QAQC Templates
+- Test plan document
+- Test case format
+- Bug report template
+- Test execution report
+
+### DevOps Templates
+- GitHub Actions CI/CD pipeline
+- GitLab CI pipeline
+- Terraform infrastructure
+- Docker Compose setup
+- Monitoring dashboard config
+
+---
+
+## 🎓 Best Practices
+
+### BA
+- Ask "Why" to understand root cause
+- Document everything in writing
+- Involve users early for feedback
+- Prioritize ruthlessly
+- Think edge cases
+
+### BE
+- Use RESTful conventions
+- Implement proper auth (JWT/OAuth)
+- Optimize database queries
+- Cache frequently accessed data
+- Handle errors gracefully
+- Follow OWASP security guidelines
+
+### QAQC
+- Test early (shift-left)
+- Automate repetitive tests
+- Write clear bug reports
+- Regression test after fixes
+- 80%+ code coverage target
+- Performance test critical paths
+
+### DevOps
+- Infrastructure as Code (IaC)
+- Automate everything
+- Monitor all services
+- Centralize logging
+- Secure secrets properly
+- Plan for rollbacks
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome! Mở issue hoặc tạo pull request.
+
+## 📄 License
+
+MIT License
+
+---
+
+## 🌟 Star History
+
+Nếu bộ skills này hữu ích, hãy cho repo một ⭐!
+
+## 📧 Contact
+
+Created by [TrungNguyenBao](https://github.com/TrungNguyenBao)
